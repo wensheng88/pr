@@ -73,7 +73,7 @@ function start() {
 
     const videoSource = videoSelect.value;
     const constraints = {
-        audio: false,
+        audio: true,
         video: { width: 320, deviceId: videoSource ? { exact: videoSource } : undefined }
     };
 
