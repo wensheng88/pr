@@ -117,6 +117,7 @@ btnRegister.onclick = function () {
         });
         peer.on('call', function (call) {
             call.answer(localStream);
+		console.log(localStrem);
         });
         peer.on('connection', (conn) => {
             conn.on('data', (data) => {
