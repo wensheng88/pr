@@ -74,7 +74,7 @@ function start() {
     const videoSource = videoSelect.value;
     const constraints = {
         audio: true,
-        video: { width: 640, deviceId: videoSource ? { exact: videoSource } : undefined }
+        video: { width: 320, deviceId: videoSource ? { exact: videoSource } : undefined }
     };
 
     navigator.mediaDevices
