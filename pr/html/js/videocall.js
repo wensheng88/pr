@@ -151,6 +151,12 @@ btnRegister.onclick = function () {
                     call.on('stream', function (stream) {
                         console.log('received remote stream');
                         remoteVideo.srcObject = stream;
+			    
+			  remoteVideo.onloadedmetadata = function(e) {
+			    // Do something with the video here.
+				  console.log(e);
+			  };
+			    
                         sendMessage(msg.to, msg.from, "accept-ok");
                     });
                 }
