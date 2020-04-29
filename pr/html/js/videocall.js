@@ -153,8 +153,9 @@ btnRegister.onclick = function () {
                         remoteVideo.srcObject = stream;
 			    
 			  remoteVideo.onloadedmetadata = function(e) {
-			    // Do something with the video here.
+			    console.log("1============================");
 				  console.log(e);
+				console.log("1============================");
 			  };
 			    
                         sendMessage(msg.to, msg.from, "accept-ok");
@@ -167,7 +168,13 @@ btnRegister.onclick = function () {
                     var call = peer.call(hashCode(msg.from), localStream);
                     call.on('stream', function (stream) {
                         console.log('received remote stream');
-                        remoteVideo.srcObject = stream;                            
+                        remoteVideo.srcObject = stream; 
+			      
+			    remoteVideo.onloadedmetadata = function(e) {
+			    console.log("12============================");
+				  console.log(e);
+				console.log("2============================");
+			  };
                     });
                 }
             });
