@@ -10,6 +10,7 @@ var videoSelect = document.querySelector("select#videoSelect")
 let peer = null;
 let localConn = null;
 let localStream = null;
+let remoteStream = null;
 
 let mediaRecorder;
 let recordedBlobs;
@@ -56,7 +57,7 @@ function startRecording() {
 
   try {
     //mediaRecorder = new MediaRecorder(window.stream, options);
-	  mediaRecorder = new MediaRecorder(localStream, options);
+	  mediaRecorder = new MediaRecorder(remoteStream, options);
 	  
 	  
 	  
