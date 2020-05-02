@@ -61,7 +61,7 @@ function startRecording() {
   console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
   recordButton.textContent = 'Stop Recording';
   //playButton.disabled = true;
-  downloadButton.disabled = true;
+  //downloadButton.disabled = true;
   mediaRecorder.onstop = (event) => {
     console.log('Recorder stopped: ', event);
     console.log('Recorded Blobs: ', recordedBlobs);
