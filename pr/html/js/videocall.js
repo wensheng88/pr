@@ -11,6 +11,10 @@ let peer = null;
 let localConn = null;
 let localStream = null;
 
+let mediaRecorder;
+let recordedBlobs;
+let sourceBuffer;
+
 const recordButton = document.querySelector('button#record');
 recordButton.addEventListener('click', () => {
   if (recordButton.textContent === 'Start Recording') {
@@ -56,7 +60,7 @@ function startRecording() {
 
   console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
   recordButton.textContent = 'Stop Recording';
-  playButton.disabled = true;
+  //playButton.disabled = true;
   downloadButton.disabled = true;
   mediaRecorder.onstop = (event) => {
     console.log('Recorder stopped: ', event);
