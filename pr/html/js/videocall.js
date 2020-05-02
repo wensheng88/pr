@@ -11,6 +11,17 @@ let peer = null;
 let localConn = null;
 let localStream = null;
 
+const recordButton = document.querySelector('button#record');
+recordButton.addEventListener('click', () => {
+  if (recordButton.textContent === 'Start Recording') {
+    startRecording();
+  } else {
+    stopRecording();
+    recordButton.textContent = 'Start Recording';
+    playButton.disabled = false;
+    downloadButton.disabled = false;
+  }
+});
 
 function startRecording() {
   recordedBlobs = [];
