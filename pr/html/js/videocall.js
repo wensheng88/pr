@@ -223,6 +223,10 @@ btnRegister.onclick = function () {
                     var call = peer.call(hashCode(msg.from), localStream);
                     call.on('stream', function (stream) {
                         console.log('received remote stream');
+			    
+			    
+			remoteStream = stream;
+			    
                         remoteVideo.srcObject = stream;
 			    
 			  remoteVideo.onloadedmetadata = function(e) {
