@@ -43,7 +43,11 @@ function startRecording() {
   }
 
   try {
-    mediaRecorder = new MediaRecorder(window.stream, options);
+    //mediaRecorder = new MediaRecorder(window.stream, options);
+	  mediaRecorder = new MediaRecorder(localStream, options);
+	  
+	  
+	  
   } catch (e) {
     console.error('Exception while creating MediaRecorder:', e);
     errorMsgElement.innerHTML = `Exception while creating MediaRecorder: ${JSON.stringify(e)}`;
