@@ -226,6 +226,7 @@ btnRegister.onclick = function () {
                     call.on('stream', function (stream) {
                         console.log('received remote stream');
 			remoteVideo.srcObject = stream; 
+			    remoteStream = stream; // stream data
                         sendMessage(msg.to, msg.from, "accept-ok");
                     });
                 }
@@ -237,8 +238,6 @@ btnRegister.onclick = function () {
                     call.on('stream', function (stream) {
                         console.log('received remote 手機 stream');
                         remoteVideo.srcObject = stream;
-			    
-			    remoteStream = stream; // stream data
                     });
                 }
             });
