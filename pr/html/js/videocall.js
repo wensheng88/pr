@@ -225,7 +225,8 @@ btnRegister.onclick = function () {
                     var call = peer.call(hashCode(msg.from), localStream);
                     call.on('stream', function (stream) {
                         console.log('received remote stream');
-			    
+			    remoteVideo.srcObject = stream; 
+			
 			
 			  remoteVideo.onloadedmetadata = function(e) {
 			    console.log("1============================");
@@ -243,8 +244,7 @@ btnRegister.onclick = function () {
                     var call = peer.call(hashCode(msg.from), localStream);
                     call.on('stream', function (stream) {
                         console.log('received remote 手機 stream');
-                        remoteVideo.srcObject = stream; 
-			
+                        
 			remoteStream = stream;
 			    
                         remoteVideo.srcObject = stream;
