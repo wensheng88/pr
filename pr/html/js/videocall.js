@@ -17,6 +17,8 @@ let recordedBlobs;
 let sourceBuffer;
 
 const recordButton = document.querySelector('button#record');
+const playButton = document.querySelector('button#play');
+
 recordButton.addEventListener('click', () => {
   if (recordButton.textContent === 'Start Recording') {
     startRecording();
