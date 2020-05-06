@@ -166,10 +166,8 @@ function start() {
     const constraints = {
         audio: true,
         //video: { width: 320, deviceId: videoSource ? { exact: videoSource } : undefined }
-	video: { video: {
-        width: 1280,
-        height: 720
-    }, deviceId: videoSource ? { exact: videoSource } : undefined }
+	video: { width: 1280, height: 720
+    , deviceId: videoSource ? { exact: videoSource } : undefined }
 	   
 	    
 	    
