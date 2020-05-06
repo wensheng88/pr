@@ -165,7 +165,19 @@ function start() {
     const videoSource = videoSelect.value;
     const constraints = {
         audio: true,
-        video: { width: 320, deviceId: videoSource ? { exact: videoSource } : undefined }
+        //video: { width: 320, deviceId: videoSource ? { exact: videoSource } : undefined }
+	video: { width: {
+            min: 320,
+            max: 1280
+        },
+        height: {
+            min: 240,
+            max: 720
+        }, deviceId: videoSource ? { exact: videoSource } : undefined }
+	   
+	    
+	    
+	    
     };
 
     navigator.mediaDevices
